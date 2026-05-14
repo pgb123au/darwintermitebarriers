@@ -1,0 +1,220 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+}
+
+const SITE = 'https://darwintermitebarriers.com.au';
+const PHONE_DISPLAY = '(03) 9003 0108';
+const PHONE_TEL = '+61390030108';
+const EMAIL = 'quotes@darwintermitebarriers.com.au';
+const BIZ_NAME = 'Darwin Termite Barriers';
+
+const { title, description, canonical = SITE + '/', ogType = 'website' } = Astro.props;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "PestControlService",
+  "@id": SITE + "/#business",
+  "name": BIZ_NAME,
+  "image": SITE + "/images/og-image.jpg",
+  "url": SITE,
+  "telephone": PHONE_TEL,
+  "priceRange": "$$",
+  "description": "Top End termite specialists — Mastotermes darwiniensis, Coptotermes acinaciformis and Schedorhinotermes barrier work across Greater Darwin. AS 3660.1 pre-construction, AS 3660.2 in-service, AS 4349.3 pre-purchase. NT Pest Control licensed. Termidor SC + Premise 200SC chemical-soil barriers. Sentricon Always Active, Exterra and Trelona baiting. Rural acreage in Mastotermes country is what we do.",
+  "areaServed": [
+    { "@type": "City", "name": "Darwin", "containedInPlace": { "@type": "AdministrativeArea", "name": "City of Darwin" } },
+    { "@type": "City", "name": "Palmerston", "containedInPlace": { "@type": "AdministrativeArea", "name": "City of Palmerston" } },
+    { "@type": "City", "name": "Casuarina" },
+    { "@type": "City", "name": "Nightcliff" },
+    { "@type": "City", "name": "Humpty Doo", "containedInPlace": { "@type": "AdministrativeArea", "name": "Litchfield Council" } },
+    { "@type": "City", "name": "Howard Springs", "containedInPlace": { "@type": "AdministrativeArea", "name": "Litchfield Council" } },
+    { "@type": "City", "name": "Berrimah" },
+    { "@type": "City", "name": "Coconut Grove" },
+    { "@type": "City", "name": "Parap" },
+    { "@type": "City", "name": "Stuart Park" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Darwin",
+    "addressRegion": "NT",
+    "postalCode": "0800",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.4634,
+    "longitude": 130.8456
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  }],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Termite Inspection, Barrier & Treatment Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Purchase Termite Inspection (AS 4349.3)" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Annual Termite Inspection (AS 3660.2)" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chemical Soil Barrier (Termidor SC / Premise 200SC)" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baiting Systems (Sentricon / Exterra / Trelona)" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Construction Barrier (AS 3660.1)" }}
+    ]
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": SITE + "/#website",
+  "url": SITE + "/",
+  "name": BIZ_NAME,
+  "inLanguage": "en-AU",
+  "publisher": { "@id": SITE + "/#business" }
+};
+// BreadcrumbList JSON-LD auto-generated from Astro.url.pathname
+const pathname = Astro.url.pathname;
+const breadcrumbSegments = pathname.split('/').filter(Boolean);
+const breadcrumbItems = [{ "@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/" }];
+let cumulative = SITE;
+breadcrumbSegments.forEach((seg, i) => {
+  cumulative += '/' + seg;
+  const friendly = seg === 'services'
+    ? 'Services'
+    : seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    "position": i + 2,
+    "name": friendly,
+    "item": cumulative + '/'
+  });
+});
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbItems
+};
+
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0e2942">
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content={BIZ_NAME}>
+  <meta property="og:image" content={SITE + "/images/og-image.jpg"}>
+  <meta property="og:image:secure_url" content={SITE + "/images/og-image.jpg"}>
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content={BIZ_NAME + " — free quote, call today"}>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={SITE + "/images/og-image.jpg"}>
+  <meta name="twitter:image:alt" content={BIZ_NAME + " — free quote, call today"}>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Playfair+Display:wght@900&family=Stardos+Stencil:wght@700&display=swap">
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "f8689c1be8dc49b9836e242390851cd4"}'></script>
+
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <slot name="head" />
+</head>
+<body>
+  <div class="top-bar">
+    <span>Free pre-purchase inspection quotes &middot; AS 3660 termite barriers &middot; Call <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/" aria-label="Darwin Termite Barriers home">
+        <img src="/images/logo.svg" alt="Darwin Termite Barriers" width="320" height="80" decoding="async">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/services/pre-purchase-inspection/">Pre-Purchase</a></li>
+        <li><a href="/services/annual-inspection/">Annual</a></li>
+        <li><a href="/services/chemical-soil-treatment/">Soil Barrier</a></li>
+        <li><a href="/services/baiting-systems/">Baiting</a></li>
+        <li><a href="/services/post-construction-protection/">New Build</a></li>
+        <li><a href="/greater-darwin/">Areas</a></li>
+      </ul>
+      <a class="nav-cta" href="/quote/">Book Inspection</a>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>Darwin Termite Barriers</h4>
+        <p style="margin-bottom: 0.75rem;">Specialist termite inspection, chemical-soil barrier and baiting-system contractors across Greater Darwin and the Top End. AS 3660.1 pre-construction, AS 3660.2 in-service, AS 4349.3 pre-purchase inspections. NT Pest Control licensed. AEPMA member. Termidor SC, Premise 200SC, Sentricon Always Active.</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Phone:</strong> <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Hours:</strong> Mon&ndash;Sat 7am&ndash;5pm ACST</p>
+        <p style="margin-bottom: 0.5rem;"><strong style="color:#fff;">Service area:</strong> City of Darwin &middot; City of Palmerston &middot; Litchfield Council &mdash; Casuarina to Humpty Doo</p>
+        <p style="margin-bottom: 0;"><strong style="color:#fff;">ABN:</strong> 91 664 546 061</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/pre-purchase-inspection/">Pre-purchase inspection</a></li>
+          <li><a href="/services/annual-inspection/">Annual inspection (AS 3660.2)</a></li>
+          <li><a href="/services/chemical-soil-treatment/">Chemical soil barrier</a></li>
+          <li><a href="/services/baiting-systems/">Baiting systems</a></li>
+          <li><a href="/services/post-construction-protection/">Pre-construction barrier</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/palmerston/">Palmerston</a></li>
+          <li><a href="/casuarina/">Casuarina</a></li>
+          <li><a href="/nightcliff/">Nightcliff</a></li>
+          <li><a href="/humpty-doo/">Humpty Doo</a></li>
+          <li><a href="/howard-springs/">Howard Springs</a></li>
+          <li><a href="/greater-darwin/">All Greater Darwin</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      &copy; {new Date().getFullYear()} {BIZ_NAME} &middot; Yes Right Pty Ltd ABN 91 664 546 061. AS 3660 / AS 4349.3 termite inspection, barrier &amp; treatment services across Greater Darwin and the Top End.
+    </p>
+  </footer>
+
+  <a class="mobile-phone" href={`tel:${PHONE_TEL}`} aria-label={`Call ${PHONE_DISPLAY}`}>
+    <span aria-hidden="true">&#9742;</span> Call {PHONE_DISPLAY}
+  </a>
+</body>
+</html>

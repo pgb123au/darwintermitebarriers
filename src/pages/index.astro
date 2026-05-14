@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a Darwin termite inspection cost in 2026?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Typical 2026 Greater Darwin bands: AS 3660.2 annual inspection $320–$480 (most homes $360–$420 — slightly above southern capitals because Top End inspections require sub-floor crawl in stumps-on-piers homes and roof-void inspections at 35–40°C wet-season temperatures). AS 4349.3 pre-purchase inspection (written report for settlement) $480–$680. Structural-and-pest combined $700–$950. Chemical soil barrier (Termidor SC or Premise 200SC) $2,800–$6,500 typical, up to $12K for rural acreage with reticulation tube around outbuildings. Sentricon Always Active baiting install $2,000–$3,800 + ~$420/yr monitoring. Pre-construction barrier on a new build $2,200–$4,200. Active Mastotermes infestation treatment varies widely — $3,500 for a small contained colony up to $30K+ for whole-of-structure rebuild remediation. Rural Litchfield Council properties cost ~15–20% more than urban Darwin due to travel time and acreage perimeter length." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Darwin termite risk so high compared to southern Australia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three reasons. (1) Mastotermes darwiniensis — the world's most destructive termite — is endemic north of about 19°S latitude. Greater Darwin sits squarely inside Mastotermes country. Unlike Coptotermes, Mastotermes will eat almost anything: timber, paper, leather, plastic, soft metals (lead flashing, copper pipe insulation), rubber, even concrete with high lime content. (2) Tropical climate = year-round activity. No winter slowdown like Melbourne or even Brisbane. Soil temperature stays above 25°C for 9+ months and rarely dips below 20°C, so colonies forage continuously. (3) Building stock is unusually termite-vulnerable: high-set timber on stumps (sub-floor moisture + timber bearers), older fibro houses with unreticulated slabs, post-Cyclone-Tracy rebuilds (1975–1985 timber framing now 40–50 years old, well past any original chemical barrier), and rural acreage at Howard Springs / Humpty Doo / Berry Springs where Mastotermes colonies can be 200–300m away in surrounding bush." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Mastotermes and Coptotermes in the Top End?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both are present in Greater Darwin and both cause major damage, but they behave very differently. Coptotermes acinaciformis is the species most pest controllers train on in southern Australia — it builds large central colonies (often inside a tree trunk), sends foraging tubes through soil, and prefers softer timbers. You'll find it in urban Darwin (Casuarina, Nightcliff, Stuart Park) as much as elsewhere in Australia. Mastotermes darwiniensis is in a separate evolutionary line — it's the only living member of its family, considered the most primitive termite still alive. It forms diffuse subterranean colonies that can spread across 1–2 hectares. It chews through concrete with high lime content, soft metals, rubber and plastic to get to cellulose. It's especially common in rural Top End acreage and along bushland boundaries. We treat both. The treatment approach differs — Mastotermes responds well to bait but needs deeper soil-injection volumes than Coptotermes because the colony footprint is wider." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the NT Building Act require termite barriers on new homes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The NT Building Regulations adopt the National Construction Code (NCC) Volume Two, which makes AS 3660.1 compliance mandatory for primary building elements on every new Class 1 (dwelling) and Class 10 (outbuilding) build. The certifier won't sign off the Form 21 occupation certificate without the Termite Management Certificate (Form 16 or equivalent) showing the AS 3660.1 system installed — typically chemical reticulation under the slab + perimeter chemical-soil treatment, OR a physical barrier (Kordon, HomeGuard) + perimeter chemical-soil, OR a baiting system with documented installation. Renovations that disturb the slab penetrations or perimeter require reinstatement of the barrier. We do the pre-construction barriers + issue the Form 16 paperwork builders need for handover." }
+    }
+  ]
+};
+---
+<Layout
+  title="Darwin Termite Barriers | Mastotermes & Coptotermes Inspections, Soil Barriers, Baiting | (03) 9003 0108"
+  description="Top End termite specialists across Greater Darwin — Mastotermes darwiniensis, Coptotermes acinaciformis and Schedorhinotermes inspection, chemical-soil barriers (Termidor SC + Premise 200SC) and Sentricon baiting. AS 3660.1 pre-construction, AS 3660.2 annual, AS 4349.3 pre-purchase. NT Pest Control licensed.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Palmerston &middot; Casuarina &middot; Nightcliff &middot; Humpty Doo &middot; Howard Springs</span>
+      <h1>Top End specialists in <span class="accent">Mastotermes &amp; Coptotermes</span> termite barriers.</h1>
+      <p class="hero-sub">
+        AS 3660.2 annual inspections. AS 4349.3 pre-purchase inspections for
+        property settlement. AS 3660.1 pre-construction barriers + Form 16
+        certification. Termidor SC and Premise 200SC chemical-soil treatments.
+        Sentricon Always Active, Exterra and Trelona baiting. Greater Darwin,
+        Palmerston, and rural Litchfield Council &mdash; Casuarina to Humpty Doo.
+        NT Pest Control licensed. AEPMA member.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book an inspection</a>
+      </div>
+
+      <div class="hero-trust">
+        <div><strong>AS 3660.1</strong>Pre-construction barrier</div>
+        <div><strong>AS 3660.2</strong>In-service inspection</div>
+        <div><strong>AS 4349.3</strong>Pre-purchase report standard</div>
+        <div><strong>AEPMA</strong>Industry-body member</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">What we do</span>
+      <h2>Five termite services.</h2>
+      <p class="section-lead">
+        From a $360 annual inspection through to a $20K whole-of-structure
+        Mastotermes remediation. We hold the NT Pest Control licence under the
+        Medicines, Poisons and Therapeutic Goods Act + AEPMA membership +
+        AS 3660 Termite Inspector certification required for all of it.
+      </p>
+
+      <div class="svc-grid">
+        <a class="svc-card" href="/services/pre-purchase-inspection/">
+          <div class="svc-icon" aria-hidden="true">&#9728;</div>
+          <h3>Pre-purchase inspection</h3>
+          <p>AS 4349.3 detailed inspection with written report for property settlement. Sub-floor stumps, roof void, perimeter, garden, moisture-meter readings, Mastotermes mound scan on rural acreage. Same-day or next-day. ~$480&ndash;$680 standard residential.</p>
+          <span class="svc-link">See pre-purchase inspections &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/annual-inspection/">
+          <div class="svc-icon" aria-hidden="true">&#9783;</div>
+          <h3>Annual inspection (AS 3660.2)</h3>
+          <p>The mandatory yearly inspection AS 3660 expects on every Australian home. Detailed sub-floor and roof-void audit, perimeter scan, moisture readings. Written report. ~$320&ndash;$480 depending on size and whether you&rsquo;re urban Darwin or rural acreage.</p>
+          <span class="svc-link">See annual inspections &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/chemical-soil-treatment/">
+          <div class="svc-icon" aria-hidden="true">&#9783;</div>
+          <h3>Chemical soil barrier</h3>
+          <p>Termidor SC or Premise 200SC non-repellent termiticide injection around the perimeter. 8&ndash;10 year barrier. Mastotermes needs deeper-than-southern injection volumes because the colony footprint is wider. $2,800&ndash;$6,500 standard, more for rural reticulation.</p>
+          <span class="svc-link">See chemical barriers &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/baiting-systems/">
+          <div class="svc-icon" aria-hidden="true">&#9618;</div>
+          <h3>Baiting systems</h3>
+          <p>Sentricon Always Active, Exterra or Trelona ATBS in-ground stations around the perimeter. Termites take bait back to the colony, kill the queen. Excellent against Mastotermes &mdash; bait reaches diffuse colonies that miss soil barriers. Install $2,000&ndash;$3,800 + ~$420/yr.</p>
+          <span class="svc-link">See baiting systems &rarr;</span>
+        </a>
+
+        <a class="svc-card" href="/services/post-construction-protection/">
+          <div class="svc-icon" aria-hidden="true">&#9608;</div>
+          <h3>Pre-construction barrier</h3>
+          <p>For new builds and major renovations &mdash; AS 3660.1 reticulation + chemical perimeter, OR physical barrier (Kordon, HomeGuard) + perimeter chemical, OR hybrid baiting. Builder needs the Form 16 Termite Management Certificate for Form 21 occupation handover. ~$2,200&ndash;$4,200.</p>
+          <span class="svc-link">See pre-construction &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <span class="section-eyebrow">Why a Top End specialist</span>
+      <h2>Three things every Darwin termite inspection should get right.</h2>
+      <div class="divider"></div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem;">
+        <div>
+          <h3>Mastotermes darwiniensis &mdash; the world&rsquo;s most destructive termite.</h3>
+          <p>
+            Australia has 350+ termite species. Three are economically destructive
+            country-wide; in the Top End, the dominant species is
+            <strong>Mastotermes darwiniensis</strong>, the Giant Northern Termite.
+            It&rsquo;s the only surviving member of family Mastotermitidae, the most
+            primitive termite lineage alive. Mastotermes colonies are
+            <em>diffuse</em>, not centralised &mdash; a single colony can spread
+            across 1&ndash;2 hectares with multiple satellite nests, which is why
+            standard southern-Australia inspection patterns miss them. Mastotermes
+            will eat timber, paper, leather, plastic, rubber, soft metals (lead
+            flashing, copper insulation, sometimes aluminium fly-screen frames),
+            and high-lime concrete. You don&rsquo;t inspect for Mastotermes by
+            looking for one mud-tube near a sub-floor bearer &mdash; you scan the
+            whole 1&ndash;2ha around the building including outbuildings, fence
+            lines, garden timbers and any bushland boundary.
+          </p>
+        </div>
+        <div>
+          <h3>High-set on stumps + monsoonal moisture = perfect storm.</h3>
+          <p>
+            Greater Darwin&rsquo;s older housing stock &mdash; 1960s&ndash;80s
+            high-set timber on concrete or steel stumps &mdash; was designed for
+            cyclone uplift, not termite resistance. Sub-floor crawl-spaces stay
+            humid for 6&ndash;9 months of the year (wet season + build-up + early
+            dry), softening bearers and joists. Combined with chronic ant-cap
+            failure on older stumps and decades of garden mulch piled against
+            stump bases, a Coptotermes or Mastotermes colony can establish in
+            sub-floor undetected for years. About 18&ndash;22% of our pre-purchase
+            inspections on pre-1990 high-set homes find active or recently-active
+            termite evidence. Annual inspection is non-negotiable on these
+            properties; many clients move to 6-monthly.
+          </p>
+        </div>
+        <div>
+          <h3>Chemical barriers expire &mdash; check when yours was last renewed.</h3>
+          <p>
+            Pre-1995 chemical-barrier treatments used organochlorines (chlordane,
+            dieldrin) which last 40+ years but are now banned. Post-1995 treatments
+            used permethrin or bifenthrin (10&ndash;15 year life). Modern
+            non-repellent chemicals (Termidor SC, Premise 200SC) last 8&ndash;10
+            years. A 1995 permethrin barrier is now 30 years old &mdash; expired.
+            A 2015 Termidor treatment is in its last year. Look at the Termite
+            Management Certificate (Form 16) installed under the meter box or in
+            the electrical sub-board &mdash; if there isn&rsquo;t one, the property
+            has been unprotected for some time. The NT&rsquo;s tropical climate
+            shortens chemical half-life; we&rsquo;ve seen 10-year-rated barriers
+            test inactive at 7&ndash;8 years on north-facing soil. We can confirm
+            at inspection and quote renewal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Service areas</span>
+      <h2>Where we inspect &amp; treat.</h2>
+      <p class="lead" style="max-width: 42rem; margin-bottom: 1rem;">
+        City of Darwin, City of Palmerston and rural Litchfield Council. High-density
+        inspection rounds across Casuarina, Nightcliff and Parap; Mastotermes acreage
+        work at Howard Springs, Humpty Doo, Berry Springs, Bees Creek and Virginia.
+        Same-day or next-day inspections most weeks.
+      </p>
+      <div class="areas-grid">
+        <a class="area-pill" href="/palmerston/">Palmerston</a>
+        <a class="area-pill" href="/casuarina/">Casuarina</a>
+        <a class="area-pill" href="/nightcliff/">Nightcliff</a>
+        <a class="area-pill" href="/humpty-doo/">Humpty Doo</a>
+        <a class="area-pill" href="/howard-springs/">Howard Springs</a>
+        <a class="area-pill" href="/greater-darwin/">Greater Darwin</a>
+        <span class="area-pill area-pill-static">Parap</span>
+        <span class="area-pill area-pill-static">Stuart Park</span>
+        <span class="area-pill area-pill-static">Coconut Grove</span>
+        <span class="area-pill area-pill-static">Rapid Creek</span>
+        <span class="area-pill area-pill-static">Berrimah</span>
+        <span class="area-pill area-pill-static">Karama</span>
+        <span class="area-pill area-pill-static">Berry Springs</span>
+        <span class="area-pill area-pill-static">Bees Creek</span>
+        <span class="area-pill area-pill-static">Virginia</span>
+        <span class="area-pill area-pill-static">Marrara</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="section-inner">
+      <span class="section-eyebrow">How it works</span>
+      <h2>From booking to written report &mdash; 5 stages.</h2>
+
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Booking</h3><p>Phone or online quote-request. Most inspections same-day or next-day. Pre-purchase inspections we&rsquo;ll usually fit within 24h for settlement deadlines, including same-day for Casuarina / Nightcliff urban runs.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Site visit</h3><p>60&ndash;90 min on-site for urban Darwin; 2&ndash;3h on rural acreage. Sub-floor stumps, roof void, perimeter, garden, fence-line, outbuildings, bushland boundary. Moisture-meter readings. Thermal-imaging if suspect activity.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Written report</h3><p>AS 3660.2 or AS 4349.3 format report with photos, moisture readings, suspect areas, chemical-barrier status, Mastotermes mound mapping (rural), treatment recommendations. Within 24h.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Treatment (if needed)</h3><p>Chemical soil injection (1&ndash;3 days for rural acreage) or baiting station install (half-day urban, full day rural). Active Mastotermes infestation = same-week treatment with monitoring schedule.</p></div>
+        <div class="step"><div class="step-num">5</div><h3>Certificate + monitoring</h3><p>Form 16 Termite Management Certificate (filed under meter box) or Pre-Purchase Report for the buyer&rsquo;s solicitor. Annual monitoring schedule. Insurance-grade documentation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Ready to book your inspection?</h2>
+        <p>60&ndash;90 min on-site (urban) / 2&ndash;3h (rural acreage). Written AS 3660.2 / AS 4349.3 report within 24h. Treatment plan if needed.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

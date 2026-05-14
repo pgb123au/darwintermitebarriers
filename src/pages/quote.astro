@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+  title="Book Termite Inspection | Darwin Termite Barriers | (03) 9003 0108"
+  description="Book a free termite inspection on Greater Darwin — pre-purchase, annual, or treatment quote. AS 3660 / AS 4349.3. NT Pest Control licensed. Same/next-day available."
+  canonical="https://darwintermitebarriers.com.au/quote/">
+
+  <section class="hero" style="padding: 2.5rem 0 3rem;">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Book An Inspection</span>
+      <h1>Book your termite inspection.</h1>
+      <p class="hero-sub">
+        Tell us what you need &mdash; pre-purchase inspection, annual inspection,
+        treatment quote, or active-infestation response. We&rsquo;ll fit
+        Greater Darwin inspections within 24&ndash;48h, including same-day for
+        settlement deadlines. Written report 24h after inspection.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="form-wrap">
+        <div class="form-card">
+          <form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thanks/">
+            <input type="hidden" name="form-name" value="quote" />
+            <p style="display:none;"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="04xx xxx xxx" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+
+            <label for="suburb">Suburb / postcode</label>
+            <input id="suburb" name="suburb" type="text" autocomplete="address-level2" required placeholder="e.g. Palmerston 0830, Casuarina 0810, Humpty Doo 0836" />
+
+            <label for="service-type">What do you need?</label>
+            <select id="service-type" name="service-type">
+              <option value="not-sure">Not sure &mdash; want a recommendation</option>
+              <option value="pre-purchase">Pre-purchase inspection (settlement deadline)</option>
+              <option value="annual-inspection">Annual inspection (AS 3660.2)</option>
+              <option value="active-infestation">I think we have active termites NOW</option>
+              <option value="chemical-treatment">Chemical soil treatment / barrier renewal</option>
+              <option value="baiting-system">Baiting system install</option>
+              <option value="new-build">Post-construction protection (new build)</option>
+              <option value="reticulation-recharge">Reticulation system re-charge</option>
+              <option value="body-corporate">Body-corporate / strata inspection</option>
+            </select>
+
+            <label for="property-type">Property type</label>
+            <select id="property-type" name="property-type">
+              <option value="house">Free-standing house</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="apartment">Apartment / unit</option>
+              <option value="commercial">Commercial / business</option>
+              <option value="acreage">Acreage / rural-residential</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="age">Approximate age</label>
+            <select id="age" name="age">
+              <option value="not-sure">Not sure</option>
+              <option value="pre-1980">Pre-1980 (very old)</option>
+              <option value="1980-2000">1980&ndash;2000</option>
+              <option value="2000-2015">2000&ndash;2015</option>
+              <option value="2015-plus">Post-2015 (modern)</option>
+              <option value="under-construction">Under construction</option>
+            </select>
+
+            <label for="urgency">Urgency</label>
+            <select id="urgency" name="urgency">
+              <option value="asap">URGENT &mdash; active termites suspected</option>
+              <option value="settlement">Settlement deadline (this week)</option>
+              <option value="2-weeks">Within 2 weeks</option>
+              <option value="month">Within a month</option>
+              <option value="schedule">Setting up a regular schedule</option>
+              <option value="quote-only">Quote only, no urgency</option>
+            </select>
+
+            <label for="risk-zone">Property location</label>
+            <select id="risk-zone" name="risk-zone">
+              <option value="standard">Standard suburban block</option>
+              <option value="canal-estate">Canal estate (Sanctuary Cove, Hope Island, Sovereign Islands)</option>
+              <option value="beachside">Original coastal Darwin (Nightcliff, Rapid Creek, Casuarina foreshore)</option>
+              <option value="wetlands-edge">Bushland-boundary acreage (Howard Springs, Humpty Doo)</option>
+              <option value="hinterland">Hinterland acreage (Howard Springs, Berry Springs, Tamborine)</option>
+              <option value="growth-corridor">Northern growth corridor (Helensvale, Pacific Pines, Coomera)</option>
+              <option value="not-sure">Not sure</option>
+            </select>
+
+            <label for="message">Any details? (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Suspect activity locations, prior inspection history, known infestation history, sub-floor accessibility, deadline details, etc."></textarea>
+
+            <button class="btn btn-primary btn-block" type="submit">Send inspection request</button>
+
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--c-muted);">We reply within 1 business day. Free, no obligation. Urgent calls answered Mon&ndash;Sat 7am&ndash;5pm.</p>
+          </form>
+        </div>
+
+        <aside class="form-aside">
+          <h3>Prefer to talk?</h3>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#9742;</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+61390030108">(03) 9003 0108</a>
+              <p style="font-size:0.85rem; color:var(--c-muted); margin:0;">Mon&ndash;Sat 7am&ndash;5pm AEST</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#9978;</span>
+            <div>
+              <strong>Service area</strong>
+              <p style="margin:0;">Full Greater Darwin &mdash; Palmerston, Casuarina, Nightcliff, Parap, Stuart Park, Berrimah, Karama, Humpty Doo, Howard Springs, Berry Springs, Bees Creek and surrounding Litchfield acreage.</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span aria-hidden="true" style="font-size:1.5rem; line-height:1;">&#10004;</span>
+            <div>
+              <strong>What you&rsquo;ll get</strong>
+              <ul style="margin:0.4rem 0 0; padding-left:1rem; font-size:0.95rem; color:var(--c-text);">
+                <li>Free phone consultation</li>
+                <li>Same/next-day inspection scheduling</li>
+                <li>AS 3660.2 / AS 4349.3 written report within 24h</li>
+                <li>Treatment plan with cost estimates if needed</li>
+                <li>NT Pest Control licensed, AEPMA-member, Termite Inspector Certified</li>
+                <li>Insurance-grade documentation</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>

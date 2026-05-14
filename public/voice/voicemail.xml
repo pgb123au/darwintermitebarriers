@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Pause length="1"/>
+  <Say voice="Polly.Nicole-Neural" language="en-AU">Thanks for calling Darwin Termite Barriers. We're sorry we missed your call. Please leave your name, your phone number, and a quick description of your retaining wall project after the beep, and we'll call you back within one business day.</Say>
+  <Record
+    maxLength="120"
+    playBeep="true"
+    finishOnKey="#"
+    recordingStatusCallback="https://darwintermitebarriers.netlify.app/.netlify/functions/voicemail"
+    recordingStatusCallbackMethod="POST"
+    recordingStatusCallbackEvent="completed"
+    transcribe="true"
+    transcribeCallback="https://darwintermitebarriers.netlify.app/.netlify/functions/voicemail-transcript"/>
+  <Say voice="Polly.Nicole-Neural" language="en-AU">Thanks for that. We'll be in touch soon.</Say>
+  <Hangup/>
+</Response>

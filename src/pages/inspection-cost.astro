@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How much does a termite inspection cost in Darwin?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard residential AS 4349.3 pre-purchase termite inspection is $480–$680 (incl GST) for a typical detached house in urban Darwin or Palmerston. Rural Litchfield acreage with house + shed runs $580–$950 because the inspection covers 2-3 hours on-site instead of 60-90 minutes. AS 3660.2 annual inspections are $320–$480/yr urban, $420–$680/yr rural. Combined building + pest is $700–$950. Top End pricing runs slightly above southern Australia because of monsoonal sub-floor humidity, longer inspection windows on stumps-on-piers stock, and Mastotermes mound mapping on rural blocks." } },
+    { "@type": "Question", "name": "How long does a termite inspection take in Darwin?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A thorough AS 4349.3 inspection of a standard 4-bedroom detached home in urban Darwin takes 60-90 minutes on site. A high-set Nightcliff cottage on stumps with sub-floor crawl-space access takes 90-120 minutes. Rural Litchfield acreage (Howard Springs, Humpty Doo) takes 2-3 hours because the inspection has to cover the full property — main house, sheds, fence lines, garden timbers, bushland boundary up to 100m from the building — for Mastotermes presence. Written report delivered within 24 hours." } },
+    { "@type": "Question", "name": "Will the inspection damage my property?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AS 4349.3 inspections are non-invasive. We use thermal imaging, moisture meters, borescope cameras and termite acoustic detection — no drilling, no panel removal without explicit consent. Any invasive testing (2mm probe holes in suspect framing, for instance) requires written approval and is quoted separately." } }
+  ]
+};
+---
+<Layout
+  title="Termite Inspection Cost Darwin 2026 | AS 4349.3 / AS 3660 Pricing | (03) 9003 0108"
+  description="Real 2026 termite inspection prices across Greater Darwin and Litchfield. Pre-purchase AS 4349.3, annual AS 3660.2, combined building + pest. What's included, how long it takes, urban vs rural pricing.">
+  <Fragment slot="head">
+    <link rel="canonical" href="https://darwintermitebarriers.com.au/inspection-cost/">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">AS 4349.3 / AS 3660.2 compliant inspections</span>
+      <h1>Termite inspection costs across <span class="accent">Greater Darwin</span>.</h1>
+      <p class="hero-sub">
+        Five inspection types, five honest prices, what each includes, and
+        the four things to insist on in any pre-purchase report. Urban Darwin
+        / Palmerston pricing, plus the rural Litchfield acreage premium.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+        <a class="btn btn-ghost" href="/quote/">Book inspection</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Five inspection types.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <h3>1. AS 4349.3 pre-purchase termite inspection &mdash; $480&ndash;$680 urban / $580&ndash;$950 rural.</h3>
+        <p>
+          Comprehensive visual inspection of the property before purchase.
+          Roof void, sub-floor, grounds, internal and external walls, outbuildings.
+          On rural Litchfield blocks we extend to bushland-boundary scan up to
+          100m from the building for Mastotermes mound and workings. Written
+          report within 24 hours with photographs. Required by most buyer&rsquo;s
+          conveyancers as a contract subject-to condition.
+        </p>
+
+        <h3 style="margin-top: 1.5rem;">2. AS 3660.2 annual inspection &mdash; $320&ndash;$480/yr urban / $420&ndash;$680/yr rural.</h3>
+        <p>
+          Mandatory if your property has a chemical or physical termite barrier
+          (most NT homes built post-1995). Re-inspection of all accessible areas.
+          Includes Form 16 paperwork review and chemical-barrier sample-point
+          testing. Required by most home insurance policies to maintain cover.
+          High-risk Top End stock (pre-1990 high-set on stumps, bushland-boundary
+          rural) often goes to 6-monthly.
+        </p>
+
+        <h3 style="margin-top: 1.5rem;">3. Combined building + termite + asbestos &mdash; $700&ndash;$950.</h3>
+        <p>
+          Pre-purchase package &mdash; same visit, three reports. Industry
+          partner conducts building inspection, we conduct termite + visual
+          asbestos. Asbestos is particularly relevant for pre-1990 post-Tracy
+          rebuilds in Casuarina, Tiwi, Wagaman that may have asbestos cement
+          sheet (fibro) cladding or original eaves. Most efficient way to do
+          pre-purchase due diligence.
+        </p>
+
+        <h3 style="margin-top: 1.5rem;">4. Active termite activity inspection &mdash; $480&ndash;$650.</h3>
+        <p>
+          If you&rsquo;ve found termites or have suspicion. Includes detailed
+          locate-and-trace, photographs, species identification (critical:
+          Mastotermes vs Coptotermes treatment paths differ significantly),
+          recommendation report with treatment options and quotes. Critical
+          first step before treatment.
+        </p>
+
+        <h3 style="margin-top: 1.5rem;">5. Post-treatment verification &mdash; $280&ndash;$380.</h3>
+        <p>
+          6&ndash;12 weeks after chemical treatment, we verify the treated
+          zone is effective by inspecting baiting stations and re-testing
+          soil sample points. Critical for warranty activation and colony
+          elimination confirmation (especially for Mastotermes treatments).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>The four things to insist on in a pre-purchase report.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <ol>
+          <li style="margin-bottom: 1rem;">
+            <strong>Photographs of EVERY area inspected.</strong> Standard
+            Darwin report should have 25&ndash;50 photos (roof void, sub-floor,
+            external walls, every elevation, any defects, plus full outbuilding
+            coverage on rural blocks).
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>List of any &ldquo;limitations to inspection&rdquo;.</strong>
+            Areas the inspector couldn&rsquo;t access (eg furniture-blocked
+            walls, locked sub-floor, vegetation against external walls,
+            inaccessible stump bases on high-set stock). These are NOT
+            &ldquo;all clear&rdquo; &mdash; they&rsquo;re unverified.
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>Conducive conditions report.</strong> Active termites is
+            one issue. Conditions that ATTRACT termites are another. Wet
+            sub-floor, timber-soil contact, gardens against external walls,
+            air-con condensate to ground, sub-floor ventilation deficits
+            &mdash; all conducive and particularly important in Darwin&rsquo;s
+            tropical climate. Report should list each.
+          </li>
+          <li style="margin-bottom: 1rem;">
+            <strong>Specific risk grading.</strong> Each finding rated as
+            low/medium/high risk with a recommended action. Generic &ldquo;no
+            active termites found&rdquo; tells you nothing &mdash; the report
+            should grade your property&rsquo;s overall risk for ongoing
+            inspection frequency, taking account of bushland boundary,
+            building age, chemical-barrier life and Mastotermes presence in
+            the local area.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Watch for: $99 inspections.</h2>
+      <div class="divider"></div>
+      <div style="max-width: 65rem;">
+        <p>
+          Door-knock and online operators offering $99 inspections work on a
+          loss-leader model: cheap inspection finds &ldquo;termite signs&rdquo;
+          (usually conducive conditions, not actual termites), then sells you
+          a $5K treatment. We&rsquo;ve seen this in Darwin and Palmerston
+          targeting new homeowners in 2025-2026.
+        </p>
+        <p>
+          A real, thorough AS 4349.3 inspection cannot be done for $99 by
+          someone whose hourly cost (van + NT Pest Control licence + insurance +
+          time) is $90&ndash;$140/hr. The maths doesn&rsquo;t work without
+          compromise. Top End rural inspections especially &mdash; you cannot do
+          2&ndash;3 hours of property scan for $99 and stay in business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="section-inner">
+      <h2>Where we work.</h2>
+      <div class="areas-grid">
+        <a class="area-pill" href="/palmerston/">Palmerston</a>
+        <a class="area-pill" href="/casuarina/">Casuarina</a>
+        <a class="area-pill" href="/nightcliff/">Nightcliff</a>
+        <a class="area-pill" href="/humpty-doo/">Humpty Doo</a>
+        <a class="area-pill" href="/howard-springs/">Howard Springs</a>
+        <a class="area-pill" href="/greater-darwin/">All Greater Darwin</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="cta-block">
+        <h2>Book your inspection.</h2>
+        <p>60&ndash;90 min urban / 2&ndash;3h rural. 25&ndash;50 photos. Report within 24 hours.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:+61390030108">&#9742; Call (03) 9003 0108</a>
+          <a class="btn btn-ghost" href="/quote/">Book inspection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
